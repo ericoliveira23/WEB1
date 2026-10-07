@@ -1,65 +1,13 @@
 <!DOCTYPE html>
-<!-- Declara que o documento é HTML5 -->
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <!-- Codificação de caracteres (acentos) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução ao HTML</title>
+    <title>atividade HTML 01</title>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <h1>Introdução ao HTML</h1>
-        <p>Página criada seguindo as vídeo-aulas de <strong>Desenvolvimento WEB I</strong>.</p>
-    </header>
-
-    <main>
-        <!-- Módulo 01 e 02: estrutura e sintaxe -->
-        <section>
-            <h2>O que é HTML?</h2>
-            <p>
-                HTML (<em>HyperText Markup Language</em>) é a linguagem de marcação
-                usada para estruturar o conteúdo de páginas web.
-            </p>
-            <h3>Elementos básicos</h3>
-            <p>Um elemento tem <strong>tag de abertura</strong>, <strong>conteúdo</strong> e <strong>tag de fechamento</strong>.</p>
-            <p>Exemplo de quebra de linha:<br>segunda linha do parágrafo.</p>
-            <hr>
-            <p>Link para o <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs</a>.</p>
-        </section>
-
-        <!-- Módulo 03: listas -->
-        <section>
-            <h2>Listas</h2>
-
-            <h3>Lista não ordenada</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-
-            <h3>Lista ordenada</h3>
-            <ol>
-                <li>Criar a pasta do projeto</li>
-                <li>Criar o arquivo index.html</li>
-                <li>Abrir no navegador</li>
-            </ol>
-
-            <h3>Lista de definição</h3>
-            <dl>
-                <dt>HTML</dt>
-                <dd>Linguagem de marcação para estruturar páginas.</dd>
-                <dt>CSS</dt>
-                <dd>Linguagem de estilos para apresentar páginas.</dd>
-            </dl>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>Atividade HTML Básico - WEB1</p>
-    </footer>
+    <h1>Atividade HTML - inicio</h1>
+    <p>Este é o meu primeiro parágrafo feito em HTML.</p>
+    <img alt="Imagem de um jogo educativo" src="data:image/png;base64,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">
 </body>
 </html>
