@@ -3,70 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML 02 -Lista,Tabelas, Formulários</title>
+  <title>HTML 02 - Listas, Tabelas, Formulários</title>
 </head>
 <body>
-  <h1>Lista,Tabelas, Formulários</h1>
-  <p>Nesta página serão apresentado exemplos de Lista,Tabelas, Formulários. </p>
+  <!-- Título e introdução da página -->
+  <h1>Listas, Tabelas, Formulários</h1>
+  <p>Nesta página serão apresentados exemplos de Listas, Tabelas, Formulários.</p>
+
+  <!-- Lista não ordenada -->
   <h2>Lista não ordenada</h2>
-  <ul> 
-      <li>Macã</li>
-      <li>Perá</li>
-       <li>uva</li>
+  <ul>
+    <li>Maçã</li>
+    <li>Pera</li>
+    <li>Uva</li>
   </ul>
+
+  <!-- Lista ordenada -->
   <h2>Lista ordenada</h2>
   <ol>
-     <li>cabeça</li>
-     <li>Ombro</li>
-     <li>Joelho</li>
-     <li>Pé</li>
- </ol>
- <h2>Lista de Definicão </h2>
- <dl>
-   <dt>HTML</dt>
+    <li>Cabeça</li>
+    <li>Ombro</li>
+    <li>Joelho</li>
+    <li>Pé</li>
+  </ol>
+
+  <!-- Lista de definição: dt é o termo, dd é a descrição -->
+  <h2>Lista de Definição</h2>
+  <dl>
+    <dt>HTML</dt>
     <dd>Linguagem de Marcação</dd>
-   <dd>CSS</dd>
-     <dd>folha de  Estilos</dd>
-   <dd>Java Script</dd>
-   <dd>Linguagem de Programacão - Interacão</dd>     
-</dl>
-<hr>
-<h2>Tabelas</h2>
-<table border="1">
-     <tr>
-         <th>Tecnologia</th>
-         <th>Descricão</th>
-   </tr>
-     <tr>
-       <td>HTMl</td>
-       <td>Linguagem de Marcação</td>
-   </tr>
-   <tr>
-        <td>CSS</td>
-        <td>Folha de  Estilo</td>
-   </tr>
-   <tr>
-         <td>Java Scipt</td>
-         <td>Linguagem de Programacão - Interacão</td>
-   </tr>
-<table/>
+    <dt>CSS</dt>
+    <dd>Folha de Estilo</dd>
+    <dt>Java Script</dt>
+    <dd>Linguagem de Programação - Interação</dd>
+  </dl>
+  <hr>
 
-<h2>Formulários</h2>
-<form action="#" method="post">
-   <libel for="nome">Nome:</lobel><br>
-   <input type="text"id="nome"name="nome"><br><br>
+  <!-- Tabela de tecnologias -->
+  <h2>Tabelas</h2>
+  <table border="1">
+    <tr>
+      <th>Tecnologia</th>
+      <th>Descrição</th>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>Linguagem de Marcação</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>Folha de Estilo</td>
+    </tr>
+    <tr>
+      <td>Java Script</td>
+      <td>Linguagem de Programação - Interação</td>
+    </tr>
+  </table>
 
-   <lobel for="email">Email:</lobel><br>
-   <input type="email" id="email" name="email"><br><b>
+  <!-- Formulário com nome, email e senha -->
+  <h2>Formulários</h2>
+  <form action="#" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome"><br><br>
 
-   <label for="senha">senha:</label><br>
-   <input type="password" id="senha" nane="senha"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
 
-   <input type="submit" value="enviar">
-</form>
+    <label for="senha">Senha:</label><br>
+    <input type="password" id="senha" name="senha"><br><br>
+
+    <!-- Botão de envio -->
+    <input type="submit" value="Enviar">
+  </form>
 </body>
 </html>
-
 
 
 
