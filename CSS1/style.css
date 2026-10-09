@@ -5,7 +5,11 @@ body {
   Oxygen, Ubuntu,Cantarell, 'Open Sans',
   'Helvetica Neue', sans-serif;
 }
-
 h1 {
   color:#0a66c2;
+}
+p{
+ color: #333333;
+ line-height:1.5;
+
 }
