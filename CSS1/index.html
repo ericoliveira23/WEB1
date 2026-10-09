@@ -5,18 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhando com CSS</title>
 
-  <!-- CSS externo: arquivo style.css -->
+  <!-- CSS externo -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- CSS interno: escrito dentro do próprio HTML -->
+  <!-- CSS interno -->
   <style>
+    h1 {
+      color: #0a66c2;
+    }
 
+    p {
+      color: #333;
+      line-height: 1.5;
+    }
+
+    #subtitulo {
+      color: #a6f2a6;
+      font-size: 2rem;
+    }
+
+    .aviso {
+      background: #fff3cd;
+      color: #664d03;
+      padding: 8px;
+      border: 1px solid #ffeeba;
+      border-radius: 4px;
+    }
   </style>
 </head>
+
 <body>
   <h1>Aprendendo CSS</h1>
 
-  <!-- CSS inline: escrito direto na tag -->
-  <p style="color: red; font-weight: bold;">Este texto está estilizado inline!</p>
+  <!-- CSS inline -->
+  <p style="color: red; font-weight: bold;">
+    Este texto está estilizado inline!
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Illo aperiam ea alias repellendus velit in modi doloribus!
+    In libero eligendi, porro laboriosam itaque corporis ab!
+    Earum magnam hic possimus ipsa.
+  </p>
+
+  <h2 id="subtitulo">Seletor ID</h2>
+
+  <h2 class="aviso">Seletor de classe</h2>
 </body>
 </html>
