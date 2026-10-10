@@ -390,3 +390,8 @@ header h2 {
   color: #12343b;
   outline: 2px solid #12343b;
 }
+/* ===== IMPRESSÃO: manter as cores de fundo ===== */
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
