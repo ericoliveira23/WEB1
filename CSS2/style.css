@@ -158,4 +158,220 @@ section {
 
 .card h3 {
   margin-bottom: 5px;
-  l
+  line-height: 1.4;
+}
+
+.card h3 a {
+  color: #12343b;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  color: #b66b16;
+}
+
+.ano {
+  color: #b66b16;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.genero {
+  color: #59676b;
+  margin: 5px 0;
+}
+
+.detalhe {
+  color: #1c5961;
+  font-weight: bold;
+  border-top: 1px solid #dddddd;
+  padding-top: 10px;
+}
+
+/* ===== TABELA ===== */
+.tabela-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+caption {
+  padding: 15px;
+  font-weight: bold;
+  color: #12343b;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  background-color: #12343b;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f5f3;
+}
+
+tbody tr:hover {
+  background-color: #fff0d0;
+}
+/* ===== LISTAS DE GÊNEROS ===== */
+.listas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.generos-disco {
+  list-style-type: disc;
+}
+
+.generos-quadrado {
+  list-style-type: square;
+}
+
+.generos-romano {
+  list-style-type: upper-roman;
+}
+
+/* ===== SOBRE E CONTATO ===== */
+.sobre {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.foto-sobre {
+  float: right;
+  width: 130px;
+  margin: 0 0 15px 20px;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.redes a {
+  display: inline-block;
+  background-color: #12343b;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.redes a:hover {
+  background-color: #e5a93d;
+  color: #12343b;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #12343b;
+  color: #ffffff;
+  text-align: center;
+  padding: 22px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #f2c66d;
+}
+
+/* ===== CELULAR E TABLET ===== */
+@media (max-width: 800px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .destaque-card {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .destaque-card > img {
+    width: 40%;
+  }
+
+  .card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    padding: 28px 5%;
+  }
+
+  nav {
+    gap: 7px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .titulo-secao {
+    font-size: 1.65rem;
+  }
+
+  .destaque-card {
+    flex-direction: column;
+  }
+
+  .destaque-card > img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+  }
+
+  .listas {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .foto-sobre {
+    width: 100px;
+  }
+}
