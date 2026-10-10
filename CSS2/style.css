@@ -45,4 +45,117 @@ header h2 {
 /* ===== MENU ===== */
 nav {
   display: flex;
-  ju
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #ffffff80;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #f2b84b;
+  color: #12343b;
+}
+
+/* ===== CONTEÚDO ===== */
+main {
+  width: min(1100px, 92%);
+  margin: 35px auto;
+}
+
+section {
+  margin-bottom: 55px;
+  scroll-margin-top: 20px;
+}
+
+.titulo-secao {
+  color: #12343b;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  border-bottom: 3px solid #e5a93d;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+/* ===== DESTAQUE DA SEMANA ===== */
+.destaque-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px #00000012;
+}
+
+.destaque-card > img {
+  width: 260px;
+  max-height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.destaque-texto {
+  flex: 1;
+}
+
+.destaque-texto h3 {
+  color: #b66b16;
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+
+.lista-generos-destaque {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.lista-generos-destaque li {
+  display: inline-block;
+  background-color: #12343b;
+  color: #ffffff;
+  padding: 5px 12px;
+  margin: 3px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ===== GRADE DE FILMES ===== */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #00000012;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px #00000020;
+}
+
+.card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  l
