@@ -1,1 +1,64 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f0e8;
+  color: #263238;
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  background: linear-gradient(135deg, #12343b, #1c5961);
+  color: #ffffff;
+  padding: 35px 7%;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header h2 {
+  margin: 10px 0 25px;
+  font-weight: normal;
+  font-size: 1.15rem;
+}
+
+/* ===== MENU ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #ffffff80;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #f2b84b;
+  c
