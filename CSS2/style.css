@@ -1,500 +1,380 @@
-/* =========================================================
-   Sessão da Tarde – Catálogo de Filmes
-   Desenvolvimento WEB I – Prática 2 (CSS)
-   Paleta: azul-petróleo (#12343B), açafrão (#E8A33D),
-           cinza-azulado (#D9E4E6), branco (#FFFFFF)
-   ========================================================= */
 
-/* ---------- 1. BASE ---------- */
+/* ===== CONFIGURAÇÕES GERAIS ===== */
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;            /* rolagem suave nas âncoras */
-  scroll-padding-top: 4rem;           /* unidade rem: espaço para o menu */
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #d9e4e6;          /* fundo do body (diferente dos cards) */
-  color: #1d2b2e;
-  font-family: "Lora", Georgia, serif;
-  font-size: 18px;                    /* unidade px */
-  line-height: 1.6;
+  background-color: #f5f0e8;
+  color: #263238;
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.7;
 }
 
-main {
-  max-width: 1100px;                  /* limita a largura do conteúdo */
-  margin: 0 auto;
-  padding: 0 5%;                      /* unidade % */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-a {
-  color: #8c2f39;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
-
-/* ---------- 2. CABEÇALHO (A) ---------- */
+/* ===== CABEÇALHO ===== */
 header {
-  /* background-image: gradiente como banner */
-  background-color: #12343b;
-  background-image: linear-gradient(135deg, #12343b 0%, #2e6f73 60%, #12343b 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(135deg, #12343b, #1c5961);
+  color: #ffffff;
+  padding: 35px 7%;
   text-align: center;
-  padding: 3rem 1rem 0;
-  border-bottom: 6px solid #e8a33d;
 }
 
 header h1 {
   margin: 0;
-  font-family: "Oswald", Impact, sans-serif;
-  font-size: clamp(2.2rem, 7vw, 4.5rem);  /* unidades rem e vw */
-  letter-spacing: 0.08em;
-  color: rgb(232, 163, 61);           /* cor em RGB */
-  text-shadow: 3px 3px 0 rgb(0, 0, 0), 6px 6px 12px rgba(0, 0, 0, 0.5);
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 header h2 {
-  margin: 0.5em 0 1.5em;
-  font-weight: 400;
-  font-style: italic;                 /* h2 em itálico */
-  font-size: 1.2em;                   /* unidade em */
-  color: #e6f0f1;
+  margin: 10px 0 25px;
+  font-weight: normal;
+  font-size: 1.15rem;
 }
 
-/* ---------- 3. MENU DE NAVEGAÇÃO (E) ---------- */
+/* ===== MENU ===== */
 nav {
-  background-color: rgba(0, 0, 0, 0.25);
-  padding: 0.6rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav a {
-  display: inline-block;              /* links lado a lado */
-  margin: 0.2rem 0.4rem;
-  padding: 0.4rem 1rem;
-  font-family: "Oswald", sans-serif;
   color: #ffffff;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  transition: background-color 0.2s, border-color 0.2s;
-}
-
-nav a:hover,
-nav a:focus {
-  background-color: #e8a33d;
-  color: #12343b;
   text-decoration: none;
-  outline: none;
+  padding: 8px 14px;
+  border: 1px solid #ffffff80;
+  border-radius: 25px;
+  transition: 0.3s;
 }
 
-/* ---------- 4. TÍTULOS DE SEÇÃO ---------- */
+nav a:hover {
+  background-color: #f2b84b;
+  color: #12343b;
+}
+
+/* ===== CONTEÚDO ===== */
+main {
+  width: min(1100px, 92%);
+  margin: 35px auto;
+}
+
 section {
-  padding: 2.5rem 0 1rem;
+  margin-bottom: 55px;
+  scroll-margin-top: 20px;
 }
 
 .titulo-secao {
-  font-family: "Oswald", sans-serif;
-  font-size: 2rem;
   color: #12343b;
-  border-bottom: 4px solid #e8a33d;
-  padding-bottom: 0.3rem;
-  margin: 0 0 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  border-bottom: 3px solid #e5a93d;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
 }
 
-/* ---------- 5. DESTAQUE DA SEMANA (B) ---------- */
+/* ===== DESTAQUE DA SEMANA ===== */
 .destaque-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  align-items: center;
+  gap: 30px;
   background-color: #ffffff;
-  border: 3px solid #12343b;
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 8px 8px 0 #e8a33d;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px #00000012;
 }
 
-.destaque-card img {
+.destaque-card > img {
   width: 260px;
-  aspect-ratio: 2 / 3;
+  max-height: 390px;
   object-fit: cover;
-  max-width: 100%;
   border-radius: 10px;
-  border: 2px solid #12343b;
 }
 
 .destaque-texto {
-  flex: 1 1 280px;
+  flex: 1;
 }
 
 .destaque-texto h3 {
-  margin: 0 0 0.5rem;
-  font-family: "Oswald", sans-serif;
-  font-size: 2.2rem;
-  color: #8c2f39;
+  color: #b66b16;
+  font-size: 1.7rem;
+  margin-top: 0;
 }
 
 .lista-generos-destaque {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 15px 0 0;
 }
 
 .lista-generos-destaque li {
   display: inline-block;
   background-color: #12343b;
   color: #ffffff;
-  padding: 0.2rem 0.9rem;
-  margin: 0 0.4rem 0.4rem 0;
+  padding: 5px 12px;
+  margin: 3px;
   border-radius: 20px;
   font-size: 0.85rem;
 }
 
-/* ---------- 6. GRADE DE FILMES (C) ---------- */
+/* ===== GRADE DE FILMES ===== */
 .grade {
-  display: flex;                      /* cards lado a lado */
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .card {
-  flex: 0 1 240px;                    /* todos os cards com o mesmo tamanho */
-  background-color: #fdf6e3;          /* diferente do body */
-  border: 1px solid #b8c7ca;          /* borda sutil */
+  background-color: #ffffff;
+  padding: 16px;
   border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 15px #00000012;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px #00000020;
 }
 
 .card img {
   width: 100%;
-  aspect-ratio: 2 / 3;                /* todos os pôsteres com a mesma proporção */
+  height: 340px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .card h3 {
-  margin: 0.8rem 0 0.2rem;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.2rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
-.card .ano {
-  margin: 0;
-  font-weight: 700;
-  color: #8c2f39;
+.card h3 a {
+  color: #12343b;
+  text-decoration: none;
 }
 
-.card .genero {
-  margin: 0.2rem 0 0;
-  font-size: 0.9rem;
-  font-style: italic;
+.card h3 a:hover {
+  color: #b66b16;
 }
 
-/* visibility: texto reservado que só aparece no hover */
-.card .detalhe {
-  visibility: hidden;
-  margin: 0.5rem 0 0;
-  font-size: 0.8rem;
-  color: #2e6f73;
+.ano {
+  color: #b66b16;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
-.card:hover .detalhe {
-  visibility: visible;
+.genero {
+  color: #59676b;
+  margin: 5px 0;
 }
 
-/* ---------- 7. TABELA (D) ---------- */
+.detalhe {
+  color: #1c5961;
+  font-weight: bold;
+  border-top: 1px solid #dddddd;
+  padding-top: 10px;
+}
+
+/* ===== TABELA ===== */
 .tabela-wrapper {
-  overflow-x: auto;                   /* rolagem horizontal no celular */
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;          /* junta as bordas */
-  background-color: #ffffff;
+  border-collapse: collapse;
+  min-width: 550px;
 }
 
 caption {
-  caption-side: bottom;
-  padding: 0.6rem;
-  font-size: 0.85rem;
-  font-style: italic;
+  padding: 15px;
+  font-weight: bold;
+  color: #12343b;
 }
 
 th,
 td {
-  padding: 0.8rem 1rem;
-  border: 1px solid #b8c7ca;
+  padding: 12px;
   text-align: left;
+  border-bottom: 1px solid #dddddd;
 }
 
 th {
-  background-color: #12343b;          /* cabeçalho destacado */
-  color: #e8a33d;
-  font-family: "Oswald", sans-serif;
+  background-color: #12343b;
+  color: #ffffff;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #e6f0f1;          /* linhas alternadas */
+  background-color: #f0f5f3;
 }
 
 tbody tr:hover {
-  background-color: #fbe3b3;
+  background-color: #fff0d0;
 }
 
-/* ---------- 8. LISTAS DE GÊNEROS (E) ---------- */
+/* ===== LISTAS DE GÊNEROS ===== */
 .listas {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.listas ul,
-.listas ol {
-  flex: 1 1 180px;
+  gap: 25px;
   background-color: #ffffff;
-  border-left: 6px solid #e8a33d;
-  border-radius: 8px;
-  padding: 1rem 1rem 1rem 2.5rem;
-  margin: 0;
+  padding: 20px;
+  border-radius: 12px;
 }
 
-.generos-disco   { list-style-type: disc; }
-.generos-quadrado { list-style-type: square; }
-.generos-romano  { list-style-type: upper-roman; }
+.generos-disco {
+  list-style-type: disc;
+}
 
-/* ---------- 9. SOBRE / CONTATO (F) ---------- */
+.generos-quadrado {
+  list-style-type: square;
+}
+
+.generos-romano {
+  list-style-type: upper-roman;
+}
+
+/* ===== SOBRE E CONTATO ===== */
 .sobre {
   background-color: #ffffff;
+  padding: 25px;
   border-radius: 12px;
-  padding: 1.5rem;
-  overflow: auto;                     /* contém o float dentro da caixa */
+  overflow: auto;
 }
 
 .foto-sobre {
-  float: right;                       /* imagem flutuando à direita */
-  width: 140px;
-  margin: 0 0 1rem 1.5rem;
-  border-radius: 50%;
-  border: 4px solid #e8a33d;
+  float: right;
+  width: 130px;
+  margin: 0 0 15px 20px;
 }
 
 .redes {
-  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0;
-  text-align: center;
-}
-
-.redes li {
-  display: inline-block;
-  margin: 0.3rem;
+  margin-top: 20px;
 }
 
 .redes a {
-  display: block;
-  padding: 0.6rem 1.4rem;
+  display: inline-block;
   background-color: #12343b;
   color: #ffffff;
-  border-radius: 8px;
-  font-family: "Oswald", sans-serif;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.redes a:hover,
-.redes a:focus {
-  background-color: #e8a33d;
-  color: #12343b;
+  padding: 8px 18px;
+  border-radius: 25px;
   text-decoration: none;
-  outline: 3px solid #12343b;
-  outline-offset: 2px;
 }
 
-/* ---------- 10. RODAPÉ ---------- */
+.redes a:hover {
+  background-color: #e5a93d;
+  color: #12343b;
+}
+
+/* ===== RODAPÉ ===== */
 footer {
-  margin-top: 3rem;
-  padding: 1.5rem 1rem;
   background-color: #12343b;
-  color: #e6f0f1;
+  color: #ffffff;
   text-align: center;
-  font-size: 0.9rem;
+  padding: 22px;
 }
 
-footer a {
-  color: #e8a33d;
-}
-
-/* ---------- 11. RESPONSIVIDADE ---------- */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-
-  .destaque-card {
-    padding: 1rem;
-  }
-
-  .foto-sobre {
-    width: 100px;
-  }
-}  visibility: hidden;
-  margin: 0.5rem 0 0;
-  font-size: 0.8rem;
-  color: #2e6f73;
-}
-
-.card:hover .detalhe {
-  visibility: visible;
-}
-
-/* ---------- 7. TABELA (D) ---------- */
-.tabela-wrapper {
-  overflow-x: auto;                   /* rolagem horizontal no celular */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;          /* junta as bordas */
-  background-color: #ffffff;
-}
-
-caption {
-  caption-side: bottom;
-  padding: 0.6rem;
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-th,
-td {
-  padding: 0.8rem 1rem;
-  border: 1px solid #b8c7ca;
-  text-align: left;
-}
-
-th {
-  background-color: #12343b;          /* cabeçalho destacado */
-  color: #e8a33d;
-  font-family: "Oswald", sans-serif;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #e6f0f1;          /* linhas alternadas */
-}
-
-tbody tr:hover {
-  background-color: #fbe3b3;
-}
-
-/* ---------- 8. LISTAS DE GÊNEROS (E) ---------- */
-.listas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.listas ul,
-.listas ol {
-  flex: 1 1 180px;
-  background-color: #ffffff;
-  border-left: 6px solid #e8a33d;
-  border-radius: 8px;
-  padding: 1rem 1rem 1rem 2.5rem;
+footer p {
   margin: 0;
 }
 
-.generos-disco   { list-style-type: disc; }
-.generos-quadrado { list-style-type: square; }
-.generos-romano  { list-style-type: upper-roman; }
-
-/* ---------- 9. SOBRE / CONTATO (F) ---------- */
-.sobre {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  overflow: auto;                     /* contém o float dentro da caixa */
-}
-
-.foto-sobre {
-  float: right;                       /* imagem flutuando à direita */
-  width: 140px;
-  margin: 0 0 1rem 1.5rem;
-  border-radius: 50%;
-  border: 4px solid #e8a33d;
-}
-
-.redes {
-  list-style-type: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
-  text-align: center;
-}
-
-.redes li {
-  display: inline-block;
-  margin: 0.3rem;
-}
-
-.redes a {
-  display: block;
-  padding: 0.6rem 1.4rem;
-  background-color: #12343b;
-  color: #ffffff;
-  border-radius: 8px;
-  font-family: "Oswald", sans-serif;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.redes a:hover,
-.redes a:focus {
-  background-color: #e8a33d;
-  color: #12343b;
-  text-decoration: none;
-  outline: 3px solid #12343b;
-  outline-offset: 2px;
-}
-
-/* ---------- 10. RODAPÉ ---------- */
-footer {
-  margin-top: 3rem;
-  padding: 1.5rem 1rem;
-  background-color: #12343b;
-  color: #e6f0f1;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 footer a {
-  color: #e8a33d;
+  color: #f2c66d;
 }
 
-/* ---------- 11. RESPONSIVIDADE ---------- */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
+/* ===== CELULAR E TABLET ===== */
+@media (max-width: 800px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .destaque-card {
-    padding: 1rem;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .destaque-card > img {
+    width: 40%;
+  }
+
+  .card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    padding: 28px 5%;
+  }
+
+  nav {
+    gap: 7px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .titulo-secao {
+    font-size: 1.65rem;
+  }
+
+  .destaque-card {
+    flex-direction: column;
+  }
+
+  .destaque-card > img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+  }
+
+  .listas {
+    flex-direction: column;
+    gap: 5px;
   }
 
   .foto-sobre {
     width: 100px;
   }
 }
+
