@@ -209,4 +209,51 @@ section {
 
 /* visibility: texto reservado que só aparece no hover */
 .card .detalhe {
-  visibil
+  visibility: hidden;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: #2e6f73;
+}
+
+.card:hover .detalhe {
+  visibility: visible;
+}
+
+/* ---------- 7. TABELA (D) ---------- */
+.tabela-wrapper {
+  overflow-x: auto;                   /* rolagem horizontal no celular */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;          /* junta as bordas */
+  background-color: #ffffff;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+th,
+td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #b8c7ca;
+  text-align: left;
+}
+
+th {
+  background-color: #12343b;          /* cabeçalho destacado */
+  color: #e8a33d;
+  font-family: "Oswald", sans-serif;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e6f0f1;          /* linhas alternadas */
+}
+
+tbody tr:hover {
+  background-color: #fbe3b3;
+}
