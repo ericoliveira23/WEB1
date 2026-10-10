@@ -1,1 +1,212 @@
+/* =========================================================
+   Sessão da Tarde – Catálogo de Filmes
+   Desenvolvimento WEB I – Prática 2 (CSS)
+   Paleta: azul-petróleo (#12343B), açafrão (#E8A33D),
+           cinza-azulado (#D9E4E6), branco (#FFFFFF)
+   ========================================================= */
 
+/* ---------- 1. BASE ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;            /* rolagem suave nas âncoras */
+  scroll-padding-top: 4rem;           /* unidade rem: espaço para o menu */
+}
+
+body {
+  margin: 0;
+  background-color: #d9e4e6;          /* fundo do body (diferente dos cards) */
+  color: #1d2b2e;
+  font-family: "Lora", Georgia, serif;
+  font-size: 18px;                    /* unidade px */
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1100px;                  /* limita a largura do conteúdo */
+  margin: 0 auto;
+  padding: 0 5%;                      /* unidade % */
+}
+
+a {
+  color: #8c2f39;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- 2. CABEÇALHO (A) ---------- */
+header {
+  /* background-image: gradiente como banner */
+  background-color: #12343b;
+  background-image: linear-gradient(135deg, #12343b 0%, #2e6f73 60%, #12343b 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 3rem 1rem 0;
+  border-bottom: 6px solid #e8a33d;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: clamp(2.2rem, 7vw, 4.5rem);  /* unidades rem e vw */
+  letter-spacing: 0.08em;
+  color: rgb(232, 163, 61);           /* cor em RGB */
+  text-shadow: 3px 3px 0 rgb(0, 0, 0), 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+header h2 {
+  margin: 0.5em 0 1.5em;
+  font-weight: 400;
+  font-style: italic;                 /* h2 em itálico */
+  font-size: 1.2em;                   /* unidade em */
+  color: #e6f0f1;
+}
+
+/* ---------- 3. MENU DE NAVEGAÇÃO (E) ---------- */
+nav {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  display: inline-block;              /* links lado a lado */
+  margin: 0.2rem 0.4rem;
+  padding: 0.4rem 1rem;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #e8a33d;
+  color: #12343b;
+  text-decoration: none;
+  outline: none;
+}
+
+/* ---------- 4. TÍTULOS DE SEÇÃO ---------- */
+section {
+  padding: 2.5rem 0 1rem;
+}
+
+.titulo-secao {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: #12343b;
+  border-bottom: 4px solid #e8a33d;
+  padding-bottom: 0.3rem;
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- 5. DESTAQUE DA SEMANA (B) ---------- */
+.destaque-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #ffffff;
+  border: 3px solid #12343b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 8px 8px 0 #e8a33d;
+}
+
+.destaque-card img {
+  width: 260px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #12343b;
+}
+
+.destaque-texto {
+  flex: 1 1 280px;
+}
+
+.destaque-texto h3 {
+  margin: 0 0 0.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  color: #8c2f39;
+}
+
+.lista-generos-destaque {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.lista-generos-destaque li {
+  display: inline-block;
+  background-color: #12343b;
+  color: #ffffff;
+  padding: 0.2rem 0.9rem;
+  margin: 0 0.4rem 0.4rem 0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ---------- 6. GRADE DE FILMES (C) ---------- */
+.grade {
+  display: flex;                      /* cards lado a lado */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 0 1 240px;                    /* todos os cards com o mesmo tamanho */
+  background-color: #fdf6e3;          /* diferente do body */
+  border: 1px solid #b8c7ca;          /* borda sutil */
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;                /* todos os pôsteres com a mesma proporção */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0.8rem 0 0.2rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+}
+
+.card .ano {
+  margin: 0;
+  font-weight: 700;
+  color: #8c2f39;
+}
+
+.card .genero {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* visibility: texto reservado que só aparece no hover */
+.card .detalhe {
+  visibil
