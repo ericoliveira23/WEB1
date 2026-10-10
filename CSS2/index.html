@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sessão da Tarde – Catálogo de Filmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- ===== A. CABEÇALHO ===== -->
+  <header id="topo">
+    <h1>Sessão da Tarde</h1>
+    <h2>Catálogo de filmes para quem ama cinema</h2>
+
+    <!-- ===== E. MENU DE NAVEGAÇÃO (links âncora) ===== -->
+    <nav>
+      <a href="#destaque">Destaque</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#generos">Gêneros</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== B. DESTAQUE DA SEMANA ===== -->
+    <section id="destaque">
+      <h2 class="titulo-secao">Destaque da Semana</h2>
+      <article class="destaque-card">
+        <img src="poster-destaque.svg" alt="Pôster do filme Parasita">
+        <div class="destaque-texto">
+          <h3>Parasita</h3>
+          <p>
+            A família Kim vive em um porão apertado e sobrevive de bicos. Quando o filho
+            consegue um emprego como tutor na casa de uma família rica, todos passam a
+            ocupar, um a um, os espaços da mansão. Uma sátira afiada sobre desigualdade
+            que vira thriller.
+          </p>
+          <ul class="lista-generos-destaque">
+            <li>Suspense</li>
+            <li>Drama</li>
+            <li>Comédia negra</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== C. GRADE DE FILMES ===== -->
+    <section id="catalogo">
+      <h2 class="titulo-secao">Catálogo</h2>
+      <div class="grade">
+
+        <article class="card">
+          <img src="poster-1.svg" alt="Pôster de Interestelar">
+          <h3><a href="#catalogo">Interestelar</a></h3>
+          <p class="ano">2014</p>
+          <p class="genero">Ficção científica, Drama</p>
+          <p class="detalhe">Ver detalhes</p>
+        </article>
+
+        <article class="card">
+          <img src="poster-2.svg" alt="Pôster de Cidade de Deus">
+          <h3><a href="#catalogo">Cidade de Deus</a></h3>
+          <p class="ano">2002</p>
+          <p class="genero">Crime, Drama</p>
+          <p class="detalhe">Ver detalhes</p>
+        </article>
+
+        <article class="card">
+          <img src="poster-3.svg" alt="Pôster de A Viagem de Chihiro">
+          <h3><a href="#catalogo">A Viagem de Chihiro</a></h3>
+          <p class="ano">2001</p>
+          <p class="genero">Animação, Fantasia</p>
+          <p class="detalhe">Ver detalhes</p>
