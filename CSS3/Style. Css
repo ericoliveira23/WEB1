@@ -9,6 +9,6 @@ romanos */
 }
 
 .lista3 {
-    list-style-image: url("icone.png"); /* 
+    list-style-image: url("25613.png"); /* 
 marcador com imagem */
 }
