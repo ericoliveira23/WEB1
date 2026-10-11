@@ -1,65 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Define a codificação para os acentos aparecerem certo -->
   <meta charset="UTF-8">
-  <!-- Faz a página se ajustar à tela do celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Título que aparece na aba do navegador -->
-  <title>CSS em lista e tabelas</title>
-  <!-- Liga o arquivo de estilo (CSS) à página -->
+  <title>Atividade CSS Básico</title>
+
+  <!-- ESTILO EXTERNO: arquivo style.css vinculado ao HTML -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ESTILO INTERNO: regras escritas dentro do próprio HTML, na tag <style> -->
+  <style>
+    .estilo-interno {
+      color: #0b6e4f;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== LISTAS ===== -->
-  <h2>Exemplo de Listas</h2>
+  <!-- ===== CABEÇALHO ===== -->
+  <header>
+    <h1>Atividade CSS Básico</h1>
+    <p>Desenvolvimento WEB I – Prática de CSS</p>
+  </header>
 
-  <!-- Lista com marcador quadrado (estilo definido em .lista1) -->
-  <ul class="lista1">
-    <li>Item com marcador quadrado</li>
-    <li>Outro item</li>
-  </ul>
+  <main>
 
-  <!-- Lista numerada com algarismos romanos (estilo definido em .lista2) -->
-  <ol class="lista2">
-    <li>Primeiro item em algarismo romano</li>
-    <li>Segundo item</li>
-  </ol>
+    <!-- ===== MÓDULO 04: TIPOS DE ESTILO ===== -->
+    <section id="tipos-estilo" class="secao">
+      <h2>Tipos de estilo: inline, interno e externo</h2>
 
-  <!-- Lista com imagem como marcador (estilo definido em .lista3) -->
-  <ul class="lista3">
-    <li>Item com marcador de imagem</li>
-    <li>Mais um item</li>
-  </ul>
+      <!-- ESTILO INLINE: escrito direto no atributo style da tag -->
+      <p style="color: crimson; font-size: 20px;">
+        Este parágrafo usa estilo <strong>inline</strong> (atributo style na própria tag).
+      </p>
 
-  <!-- ===== TABELA ===== -->
-  <h2>Exemplo de Tabela</h2>
+      <!-- Estilo interno (definido na tag <style> do cabeçalho) -->
+      <p class="estilo-interno">
+        Este parágrafo usa estilo <strong>interno</strong> (tag style no head).
+      </p>
 
-  <table class="tabela">
-    <!-- Linha do cabeçalho: th são as células de título -->
-    <tr>
-      <th>Nome</th>
-      <th>Idade</th>
-      <th>Cidade</th>
-    </tr>
-    <!-- Linhas de dados: td são as células comuns -->
-    <tr>
-      <td>Ana</td>
-      <td>25</td>
-      <td>Salvador</td>
-    </tr>
-    <tr>
-      <td>Pedro</td>
-      <td>30</td>
-      <td>Recife</td>
-    </tr>
-    <tr>
-      <td>Maria</td>
-      <td>28</td>
-      <td>Fortaleza</td>
-    </tr>
-  </table>
+      <!-- Estilo externo (definido no arquivo style.css) -->
+      <p class="estilo-externo">
+        Este parágrafo usa estilo <strong>externo</strong> (arquivo style.css).
+      </p>
+    </section>
+
+    <!-- ===== MÓDULO 05: CORES, BORDAS, ESPAÇAMENTO E MARGEM ===== -->
+    <section id="cores" class="secao fundo-cor">
+      <h2>Cores, bordas e espaçamentos</h2>
+      <p>Esta seção usa <code>background-color</code>, <code>border</code>, <code>padding</code> e <code>margin</code>.</p>
+
+      <div class="caixa">
+        <p>Caixa com borda sólida, padding interno e margin externo.</p>
+      </div>
+
+      <div class="caixa caixa-tracejada">
+        <p>Caixa com borda tracejada e cantos arredondados.</p>
+      </div>
+    </section>
+
+    <!-- ===== MÓDULO 05: BACKGROUND COM IMAGEM ===== -->
+    <section id="imagem-fundo" class="secao fundo-imagem">
+      <h2>Background com imagem</h2>
+      <p>Esta seção usa <code>background-image</code> com um padrão de bolinhas.</p>
+    </section>
+
+    <!-- ===== MÓDULO 06: TEXTOS E FONTES ===== -->
+    <section id="textos" class="secao">
+      <h2>Textos e fontes</h2>
+      <p class="texto-serifa">Fonte com serifa (Georgia), tamanho 18px.</p>
+      <p class="texto-sem-serifa">Fonte sem serifa (Arial), em negrito.</p>
+      <p class="texto-mono">Fonte monoespaçada (Courier New), em itálico.</p>
+      <p class="texto-centro">Texto centralizado, em maiúsculas e com espaço entre letras.</p>
+      <p class="texto-direita">Texto alinhado à direita, com sublinhado.</p>
+    </section>
+
+    <!-- ===== MÓDULO 07: LISTAS ===== -->
+    <section id="listas" class="secao">
+      <h2>Listas</h2>
+      <div class="listas">
+        <ul class="lista-disco">
+          <li>Marcador disco</li>
+          <li>Outro item</li>
+        </ul>
+        <ul class="lista-quadrado">
+          <li>Marcador quadrado</li>
+          <li>Outro item</li>
+        </ul>
+        <ol class="lista-romano">
+          <li>Algarismo romano</li>
+          <li>Segundo item</li>
+        </ol>
+        <ol class="lista-letra">
+          <li>Letras minúsculas</li>
+          <li>Segundo item</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== MÓDULO 07: TABELAS ===== -->
+    <section id="tabelas" class="secao">
+      <h2>Tabela</h2>
+      <table class="tabela">
+        <caption>Alunos e cidades</caption>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ana</td><td>25</td><td>Salvador</td></tr>
+          <tr><td>Pedro</td><td>30</td><td>Recife</td></tr>
+          <tr><td>Maria</td><td>28</td><td>Fortaleza</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== MÓDULO 07: LINKS ===== -->
+    <section id="links" class="secao">
+      <h2>Links</h2>
+      <p>
+        <a class="link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a> |
+        <a class="link" href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener">MDN</a> |
+        <a class="link" href="#tipos-estilo">Link interno (volta ao início)</a>
+      </p>
+      <p>Passe o mouse e clique nos links para ver os estados <code>hover</code> e <code>active</code>.</p>
+    </section>
+
+    <!-- ===== MÓDULO 07: DISPLAY E VISIBILITY ===== -->
+    <section id="display" class="secao">
+      <h2>Display e visibility</h2>
+
+      <p>
+        <span class="caixa-display">inline 1</span>
+        <span class="caixa-display">inline 2</span>
+        <span class="caixa-display">inline 3</span>
+      </p>
+
+      <div class="bloco-display">block 1 (ocupa a linha toda)</div>
+      <div class="bloco-display">block 2 (ocupa a linha toda)</div>
+
+      <div class="inline-bloco">inline-block 1</div>
+      <div class="inline-bloco">inline-block 2</div>
+
+      <p class="oculto-display">Este parágrafo usa display: none (some e não ocupa espaço).</p>
+      <p class="oculto-visibility">Este parágrafo usa visibility: hidden (some, mas ocupa espaço).</p>
+      <p>Este parágrafo vem depois, para você ver o espaço deixado pelo visibility: hidden.</p>
+    </section>
+
+    <!-- ===== MÓDULO 07: UNIDADES DE MEDIDA ===== -->
+    <section id="unidades" class="secao">
+      <h2>Unidades de medida</h2>
+      <div class="unidade u-px">px: largura fixa de 300px</div>
+      <div class="unidade u-porcento">%: largura de 50% do elemento pai</div>
+      <div class="unidade u-em">em: largura de 20em (relativa à fonte do elemento)</div>
+      <div class="unidade u-rem">rem: largura de 20rem (relativa à fonte da página)</div>
+      <div class="unidade u-vw">vw: largura de 60vw (60% da largura da tela)</div>
+      <div class="unidade u-vh">vh: altura de 15vh (15% da altura da tela)</div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <p>Desenvolvimento WEB I – Atividade CSS Básico</p>
+  </footer>
 
 </body>
 </html>
+
