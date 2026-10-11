@@ -1,11 +1,14 @@
 .lista1 {
-    list-style-type: square; /* marcador quadrado */
+    list-style-type: square; /* marcador
+quadrado */
 }
 
 .lista2 {
-    list-style-type: upper-roman; /* algarismos romanos */
+    list-style-type: upper-roman; /* algarismos
+romanos */
 }
 
 .lista3 {
-    list-style-image: url("icone.png"); /* marcador com imagem */
+    list-style-image: url("icone.png"); /* 
+marcador com imagem */
 }
