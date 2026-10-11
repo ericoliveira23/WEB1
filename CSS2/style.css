@@ -1,11 +1,11 @@
-/* ===== GERAL ===== */
+/* Aluno: SEU NOME */
+
 body {
   font-family: 'Times New Roman', serif;
   margin: 20px;
-  color: #222222;
 }
 
-/* ===== LISTAS ===== */
+/* Listas */
 .lista1 {
   list-style-type: square;
 }
@@ -18,7 +18,7 @@ body {
   list-style-image: url('icone.png');
 }
 
-/* ===== TABELA ===== */
+/* Tabela */
 .tabela {
   width: 100%;
   border-collapse: collapse;
@@ -33,11 +33,4 @@ body {
 
 .tabela th {
   background-color: #f2f2f2;
-}
-
-/* ===== MARCADOR QUADRADO DENTRO DA TABELA ===== */
-.lista-tabela {
-  list-style-type: square;
-  margin: 0;
-  padding-left: 18px;
 }
