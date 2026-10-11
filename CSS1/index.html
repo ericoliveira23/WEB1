@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalhando com CSS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atividade CSS Básico</title>
 
+  <!-- ESTILO EXTERNO: arquivo style.css vinculado ao HTML -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ESTILO INTERNO: regras escritas dentro do próprio HTML, na tag <style> -->
+  <style>
+    .estilo-interno {
+      color: #0b6e4f;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1>Aprendendo CSS</h1>
-    <p style="color: red; font-weight: bold;">Este texto está estilizado inline!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam ea alias repellendus velit in modi doloribus! In libero eligendi, porro laboriosam itaque corporis ab! Earum magnam hic possimus ipsa.</p>
 
-    <h2 id="subtitulo">Seletor ID</h2>
-    <h2 class="aviso">Seletor Classe</h2>
-    <h2>Estilo agrupado</h2>
+  <!-- ===== CABEÇALHO ===== -->
+  <header>
+    <h1>Atividade CSS Básico</h1>
+    <p>Desenvolvimento WEB I – Prática de CSS</p>
+  </header>
 
-    
-     <div class="caixa3">
-     <p>lorem ipsum dolor sit amet
-      conserctetur, adipsicing elit.
-      Quaerat nisi sit error cum culpa quo 
-      preferendis quibusdam magni expedita
-      sunt isto molestias tempora  ullam
-      exercitationem animi  quiseram esse
-      optio  odio?
-         
-     
-     </p>
-         
-     </div>
-</body>
-</html>
+  <main>
 
+    <!-- ===== MÓDULO 04: TIPOS DE ESTILO ===== -->
+    <section id="tipos-estilo" class="secao">
+      <h2>Tipos de estilo: inline, interno e externo</h2>
+
+      <!-- ESTILO INLINE: escrito direto no atributo style da tag -->
+      <p style="color: crimson; font-size: 20px;">
+        Este parágrafo usa estilo <strong>inline</strong> (atributo style na própria tag).
+      </p>
+
+      <!-- Estilo interno (definido na tag <style> do cabeçalho) -->
+      <p class="estilo-interno">
+        Este parágrafo usa estilo <strong>interno</strong> (tag style no head).
+      </p>
+
+      <!-- Estilo externo (definido no arquivo style.css) -->
+      <p class="estilo-externo">
+        Este parágrafo usa estilo <strong>externo</strong> (arquivo style.css).
+      </p>
+    </section>
+
+    <!-- ===== MÓDULO 05: CORES, BACKGROUND, BORDAS, ESPAÇAMENTO E MARGEM ===== -->
+    <section id="cores" class="secao fundo-cor">
+      <h2>Cores, bordas e espaçamentos</h2>
+      <p>Esta seção usa <code>background-color</code>, <code>border</code>, <code>padding</code> e <code>margin</code>.</p>
+
+      <div class="caixa">
+        <p>Caixa com borda sólida, padding interno e margin externo.</p>
+      </div>
