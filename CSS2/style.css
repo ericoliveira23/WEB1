@@ -1,46 +1,251 @@
-/* ===== CONFIGURAÇÕES GERAIS ===== */
+@charset "utf-8";
+
+/* ==========================================================
+   ATIVIDADE CSS BÁSICO – Desenvolvimento WEB I
+   ESTILO EXTERNO (arquivo vinculado ao HTML com <link>)
+   ========================================================== */
+
+/* ---------- MÓDULO 04: BASE E ESTRUTURA ---------- */
+
+/* Seletor universal: o tamanho da caixa inclui padding e borda */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Times New Roman', serif; /* tipo de letra da página */
-  margin: 20px;                          /* espaço entre a página e a borda da tela */
-  background-color: #eef4ff;             /* fundo azul bem claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222222;
+}
+
+/* Seletor agrupado: cabeçalho e rodapé compartilham o mesmo estilo */
+header,
+footer {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 25px auto;
+}
+
+/* Cartão usado em todas as seções */
+.secao {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
 }
 
 h2 {
-  color: #1c5fd1; /* títulos em azul */
+  color: #1f3a5f;
+  border-bottom: 2px solid #e5a93d;
+  padding-bottom: 6px;
 }
 
-/* ===== LISTAS ===== */
-
-/* Marcador quadrado */
-.lista1 {
-  list-style-type: square;
+/* Estilo externo (comparado com inline e interno) */
+.estilo-externo {
+  color: #6a1b9a;
+  font-style: italic;
 }
 
-/* Numeração em algarismos romanos maiúsculos (I, II, III...) */
-.lista2 {
-  list-style-type: upper-roman;
+/* ---------- MÓDULO 05: CORES, BACKGROUND, BORDAS, ESPAÇAMENTO ---------- */
+
+.fundo-cor {
+  background-color: #e8f1ff;
 }
 
-/* Imagem no lugar do marcador (o icone.png precisa estar na mesma pasta) */
-.lista3 {
-  list-style-image: url('icone.png');
+/* Caixa: borda sólida, padding (interno) e margin (externo) */
+.caixa {
+  background-color: #ffffff;
+  border: 3px solid #1f3a5f;
+  padding: 15px;
+  margin: 15px 0;
 }
 
-/* ===== TABELA ===== */
+/* Variação: borda tracejada e cantos arredondados */
+.caixa-tracejada {
+  border: 3px dashed #e5a93d;
+  border-radius: 15px;
+}
+
+/* Background com imagem (SVG de bolinhas repetido) */
+.fundo-imagem {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='3' fill='%231f3a5f' fill-opacity='0.25'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-color: #fff7e0;
+}
+
+/* ---------- MÓDULO 06: TEXTOS E FONTES ---------- */
+
+.texto-serifa {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  color: #8b2e16;
+}
+
+.texto-sem-serifa {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #0b6e4f;
+}
+
+.texto-mono {
+  font-family: "Courier New", monospace;
+  font-style: italic;
+  color: #333399;
+}
+
+.texto-centro {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.texto-direita {
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* ---------- MÓDULO 07: LISTAS ---------- */
+
+.listas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.lista-disco    { list-style-type: disc; }
+.lista-quadrado { list-style-type: square; }
+.lista-romano   { list-style-type: upper-roman; }
+.lista-letra    { list-style-type: lower-alpha; }
+
+/* ---------- MÓDULO 07: TABELAS ---------- */
+
 .tabela {
-  width: 100%;              /* ocupa a largura toda da tela */
-  border-collapse: collapse; /* junta as bordas das células em uma só linha */
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Bordas e espaçamento das células de título e de dados */
+.tabela caption {
+  font-weight: bold;
+  padding: 8px;
+}
+
 .tabela th,
 .tabela td {
-  border: 1px solid #999999; /* linha fina cinza em volta de cada célula */
-  padding: 10px;             /* espaço entre o texto e a borda da célula */
-  text-align: left;          /* texto alinhado à esquerda */
+  border: 1px solid #999999;
+  padding: 10px;
+  text-align: left;
 }
 
-/* Cabeçalho da tabela com fundo azul claro */
 .tabela th {
-  background-color: #d6e4ff;
+  background-color: #1f3a5f;
+  color: #ffffff;
 }
+
+/* Linhas pares com cor diferente (zebrado) */
+.tabela tbody tr:nth-child(even) {
+  background-color: #eef3f8;
+}
+
+/* Destaque ao passar o mouse na linha */
+.tabela tbody tr:hover {
+  background-color: #fff0d0;
+}
+
+/* ---------- MÓDULO 07: LINKS (ordem: link, visited, hover, active) ---------- */
+
+.link:link {
+  color: #1c5fd1;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: #6a1b9a;
+}
+
+.link:hover {
+  color: #b66b16;
+  text-decoration: underline;
+}
+
+.link:active {
+  color: #d32f2f;
+}
+
+/* ---------- MÓDULO 07: DISPLAY E VISIBILITY ---------- */
+
+.caixa-display {
+  display: inline;
+  background-color: #ffd54f;
+  padding: 5px;
+}
+
+.bloco-display {
+  display: block;
+  background-color: #90caf9;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.inline-bloco {
+  display: inline-block;
+  width: 150px;
+  background-color: #a5d6a7;
+  padding: 8px;
+  margin: 5px;
+}
+
+/* display: none remove o elemento e o espaço dele */
+.oculto-display {
+  display: none;
+}
+
+/* visibility: hidden esconde, mas mantém o espaço */
+.oculto-visibility {
+  visibility: hidden;
+}
+
+/* ---------- MÓDULO 07: UNIDADES DE MEDIDA ---------- */
+
+.unidade {
+  background-color: #cfd8dc;
+  border: 1px solid #607d8b;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.u-px     { width: 300px; max-width: 100%; }  /* pixels: tamanho fixo */
+.u-porcento { width: 50%; }                   /* % do elemento pai */
+.u-em     { width: 20em; max-width: 100%; }   /* relativa à fonte do elemento */
+.u-rem    { width: 20rem; max-width: 100%; }  /* relativa à fonte da página */
+.u-vw     { width: 60vw; }                    /* % da largura da tela */
+.u-vh     { height: 15vh; }                   /* % da altura da tela */
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .listas {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
