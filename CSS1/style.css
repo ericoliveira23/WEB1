@@ -30,6 +30,9 @@ p {
     border-radius: 4px;
 }
 .caixa3 P{
-    padding: 10px;
+  width: 300px;
+  min-height:150px;
+  max-width:90%px
+  background: #lightgray;
 }
 
