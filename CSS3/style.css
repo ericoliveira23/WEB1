@@ -1,1 +1,29 @@
+.lista1 {
+    list-style-type: square; /* marcador
+quadrado */
+}
 
+.lista2 {
+    list-style-type: upper-roman; /* algarismos
+romanos */
+}
+
+.lista3 {
+    list-style-image: url("25613.png"); /* 
+marcador com imagem */
+}
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse; /* une bordas */
+}
+
+th, td {
+    border: 1px solid #999999; /* borda das células */
+    padding: 10px; /* espaço interno */
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* linhas pares */
+}
