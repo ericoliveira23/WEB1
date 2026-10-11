@@ -1,36 +1,46 @@
-/* Aluno: SEU NOME */
-
+/* ===== CONFIGURAÇÕES GERAIS ===== */
 body {
-  font-family: 'Times New Roman', serif;
-  margin: 20px;
+  font-family: 'Times New Roman', serif; /* tipo de letra da página */
+  margin: 20px;                          /* espaço entre a página e a borda da tela */
+  background-color: #eef4ff;             /* fundo azul bem claro */
 }
 
-/* Listas */
+h2 {
+  color: #1c5fd1; /* títulos em azul */
+}
+
+/* ===== LISTAS ===== */
+
+/* Marcador quadrado */
 .lista1 {
   list-style-type: square;
 }
 
+/* Numeração em algarismos romanos maiúsculos (I, II, III...) */
 .lista2 {
   list-style-type: upper-roman;
 }
 
+/* Imagem no lugar do marcador (o icone.png precisa estar na mesma pasta) */
 .lista3 {
   list-style-image: url('icone.png');
 }
 
-/* Tabela */
+/* ===== TABELA ===== */
 .tabela {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%;              /* ocupa a largura toda da tela */
+  border-collapse: collapse; /* junta as bordas das células em uma só linha */
 }
 
+/* Bordas e espaçamento das células de título e de dados */
 .tabela th,
 .tabela td {
-  border: 1px solid #cccccc;
-  padding: 10px;
-  text-align: left;
+  border: 1px solid #999999; /* linha fina cinza em volta de cada célula */
+  padding: 10px;             /* espaço entre o texto e a borda da célula */
+  text-align: left;          /* texto alinhado à esquerda */
 }
 
+/* Cabeçalho da tabela com fundo azul claro */
 .tabela th {
-  background-color: #f2f2f2;
+  background-color: #d6e4ff;
 }
