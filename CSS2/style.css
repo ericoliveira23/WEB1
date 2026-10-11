@@ -1,29 +1,43 @@
+/* ===== GERAL ===== */
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 20px;
+  color: #222222;
+}
+
+/* ===== LISTAS ===== */
 .lista1 {
-    list-style-type: square; /* marcador
-quadrado */
+  list-style-type: square;
 }
 
 .lista2 {
-    list-style-type: upper-roman; /* algarismos
-romanos */
+  list-style-type: upper-roman;
 }
 
 .lista3 {
-    list-style-image: url("25613.png"); /* 
-marcador com imagem */
-}
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse; /* une bordas */
+  list-style-image: url('icone.png');
 }
 
-th, td {
-    border: 1px solid #999999; /* borda das células */
-    padding: 10px; /* espaço interno */
-    text-align: left;
+/* ===== TABELA ===== */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* linhas pares */
+.tabela th,
+.tabela td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela th {
+  background-color: #f2f2f2;
+}
+
+/* ===== MARCADOR QUADRADO DENTRO DA TABELA ===== */
+.lista-tabela {
+  list-style-type: square;
+  margin: 0;
+  padding-left: 18px;
 }
