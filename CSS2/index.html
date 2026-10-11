@@ -1,72 +1,49 @@
 <!DOCTYPE html>
-<!-- Aluno: SEU NOME | Desenvolvimento WEB I - CSS 02 -->
 <html lang="pt-BR">
 <head>
+  <!-- Define a codificação para os acentos aparecerem certo -->
   <meta charset="UTF-8">
+  <!-- Faz a página se ajustar à tela do celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Título que aparece na aba do navegador -->
   <title>CSS em lista e tabelas</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', serif;
-      margin: 20px;
-    }
-
-    .lista1 {
-      list-style-type: square;
-    }
-
-    .lista2 {
-      list-style-type: upper-roman;
-    }
-
-    .lista3 {
-      list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='%231c5fd1'/%3E%3C/svg%3E");
-    }
-
-    .tabela {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .tabela th,
-    .tabela td {
-      border: 1px solid #cccccc;
-      padding: 10px;
-      text-align: left;
-    }
-
-    .tabela th {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <!-- Liga o arquivo de estilo (CSS) à página -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ===== LISTAS ===== -->
   <h2>Exemplo de Listas</h2>
 
+  <!-- Lista com marcador quadrado (estilo definido em .lista1) -->
   <ul class="lista1">
     <li>Item com marcador quadrado</li>
     <li>Outro item</li>
   </ul>
 
+  <!-- Lista numerada com algarismos romanos (estilo definido em .lista2) -->
   <ol class="lista2">
     <li>Primeiro item em algarismo romano</li>
     <li>Segundo item</li>
   </ol>
 
+  <!-- Lista com imagem como marcador (estilo definido em .lista3) -->
   <ul class="lista3">
     <li>Item com marcador de imagem</li>
     <li>Mais um item</li>
   </ul>
 
+  <!-- ===== TABELA ===== -->
   <h2>Exemplo de Tabela</h2>
 
   <table class="tabela">
+    <!-- Linha do cabeçalho: th são as células de título -->
     <tr>
       <th>Nome</th>
       <th>Idade</th>
       <th>Cidade</th>
     </tr>
+    <!-- Linhas de dados: td são as células comuns -->
     <tr>
       <td>Ana</td>
       <td>25</td>
