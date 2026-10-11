@@ -1,38 +1,260 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+  box-sizing: border-box; /* padding e borda entram no cálculo da largura */
+}
+
 body {
-    background-color: #FFDAB9;
-    background-imagem:url("back01.jpg");
-    background-repeat:no-repeat;
-    background-size:  cover:
-    margin: 20px:
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;                          /* remove a margem padrão do navegador */
+  font-family: Arial, sans-serif;     /* fonte padrão da página */
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222222;
 }
 
-h1, h2 {
-    color: #0a66c2;
+/* ===== CABEÇALHO E RODAPÉ ===== */
+header,
+footer {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
 }
 
-p {
-    color: #333;
-    line-height: 1.5;
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
 }
 
-#subtitulo {
-    color: darkgreen;
-    font-size: 2rem;
+/* ===== ÁREA PRINCIPAL ===== */
+main {
+  width: 90%;          /* largura em porcentagem */
+  max-width: 900px;    /* limite máximo em pixels */
+  margin: 25px auto;   /* auto centraliza horizontalmente */
 }
 
-.aviso {
-    background: #fff3cd;
-    color: #664d03;
-    padding: 8px;
-    border: 1px solid #ffeeba;
-    border-radius: 4px;
+.secao {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
 }
-.caixa3 P{
-  width: 400px;
-  min-height:300px;
-  max-width:100%px
-  background: #rag(140,103,103):
+
+h2 {
+  color: #1f3a5f;
+  border-bottom: 2px solid #e5a93d;
+  padding-bottom: 6px;
+}
+
+/* ===== TIPOS DE ESTILO ===== */
+.estilo-externo {
+  color: #6a1b9a;
+  font-style: italic;
+}
+
+/* ===== CORES, BORDAS E ESPAÇAMENTOS ===== */
+.fundo-cor {
+  background-color: #e8f1ff; /* cor de fundo da seção */
+}
+
+.caixa {
+  background-color: #ffffff;
+  border: 3px solid #1f3a5f; /* borda sólida */
+  padding: 15px;             /* espaço interno */
+  margin: 15px 0;            /* espaço externo */
+}
+
+.caixa-tracejada {
+  border: 3px dashed #e5a93d; /* borda tracejada */
+  border-radius: 15px;        /* cantos arredondados */
+}
+
+/* ===== BACKGROUND COM IMAGEM ===== */
+.fundo-imagem {
+  /* imagem de fundo (padrão de bolinhas) embutida no próprio CSS */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='3' fill='%231f3a5f' fill-opacity='0.25'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-color: #fff7e0;
+}
+
+/* ===== TEXTOS E FONTES ===== */
+.texto-serifa {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  color: #8b2e16;
+}
+
+.texto-sem-serifa {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #0b6e4f;
+}
+
+.texto-mono {
+  font-family: 'Courier New', monospace;
+  font-style: italic;
+  color: #333399;
+}
+
+.texto-centro {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.texto-direita {
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* ===== LISTAS ===== */
+.listas {
+  display: flex;      /* coloca as listas lado a lado */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.lista-disco {
+  list-style-type: disc;
+}
+
+.lista-quadrado {
+  list-style-type: square;
+}
+
+.lista-romano {
+  list-style-type: upper-roman;
+}
+
+.lista-letra {
+  list-style-type: lower-alpha;
+}
+
+/* ===== TABELAS ===== */
+.tabela {
+  width: 100%;
+  border-collapse: collapse; /* junta as bordas das células */
+}
+
+.tabela caption {
+  font-weight: bold;
+  padding: 8px;
+}
+
+.tabela th,
+.tabela td {
+  border: 1px solid #999999;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela th {
+  background-color: #1f3a5f;
+  color: #ffffff;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background-color: #eef3f8; /* linhas pares com cor diferente */
+}
+
+.tabela tbody tr:hover {
+  background-color: #fff0d0; /* destaque ao passar o mouse */
+}
+
+/* ===== LINKS ===== */
+.link:link {            /* link ainda não visitado */
+  color: #1c5fd1;
+  text-decoration: none;
+}
+
+.link:visited {         /* link já visitado */
+  color: #6a1b9a;
+}
+
+.link:hover {           /* mouse em cima */
+  color: #b66b16;
+  text-decoration: underline;
+}
+
+.link:active {          /* no momento do clique */
+  color: #d32f2f;
+}
+
+/* ===== DISPLAY E VISIBILITY ===== */
+.caixa-display {
+  display: inline;        /* fica na mesma linha, sem largura própria */
+  background-color: #ffd54f;
+  padding: 5px;
+}
+
+.bloco-display {
+  display: block;         /* ocupa a linha inteira */
+  background-color: #90caf9;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.inline-bloco {
+  display: inline-block;  /* na mesma linha, mas aceita largura e altura */
+  width: 150px;
+  background-color: #a5d6a7;
+  padding: 8px;
+  margin: 5px;
+}
+
+.oculto-display {
+  display: none;          /* some e NÃO ocupa espaço */
+}
+
+.oculto-visibility {
+  visibility: hidden;     /* some, mas CONTINUA ocupando espaço */
+}
+
+/* ===== UNIDADES DE MEDIDA ===== */
+.unidade {
+  background-color: #cfd8dc;
+  border: 1px solid #607d8b;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.u-px {
+  width: 300px;      /* pixels: tamanho fixo */
+}
+
+.u-porcento {
+  width: 50%;        /* porcentagem do elemento pai */
+}
+
+.u-em {
+  width: 20em;       /* relativa ao tamanho da fonte do elemento */
+  max-width: 100%;   /* evita estourar a tela do celular */
+}
+
+.u-rem {
+  width: 20rem;      /* relativa ao tamanho da fonte da página (html) */
+  max-width: 100%;
+}
+
+.u-vw {
+  width: 60vw;       /* 60% da largura da janela */
+}
+
+.u-vh {
+  height: 15vh;      /* 15% da altura da janela */
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .listas {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 
 
