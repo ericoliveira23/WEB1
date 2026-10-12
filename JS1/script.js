@@ -6,14 +6,12 @@
 
 /* ===== B. DADOS DOS FILMES (array de objetos) ===== */
 let filmes = [
-  { titulo: "Interestelar",             ano: 2014, genero: "Ficção científica", nota: 8.7, poster: "poster-1.jpg" },
   { titulo: "Cidade de Deus",           ano: 2002, genero: "Crime",             nota: 8.6, poster: "poster-2.jpg" },
   { titulo: "A Viagem de Chihiro",      ano: 2001, genero: "Animação",          nota: 8.6, poster: "poster-3.jpg" },
   { titulo: "Mad Max: Estrada da Fúria", ano: 2015, genero: "Ação",             nota: 8.1, poster: "poster-4.jpg" },
   { titulo: "Ainda Estou Aqui",         ano: 2024, genero: "Drama",             nota: 8.0, poster: "poster-5.jpg" },
   { titulo: "Divertida Mente",          ano: 2015, genero: "Animação",          nota: 8.1, poster: "poster-6.jpg" },
-  { titulo: "Parasita",                 ano: 2019, genero: "Suspense",          nota: 8.5, poster: "poster-destaque.jpg" },
-  { titulo: "Shrek",                    ano: 2001, genero: "Animação",          nota: 7.9, poster: "poster-7.jpg" }
+  { titulo: "Parasita",                 ano: 2019, genero: "Suspense",          nota: 8.5, poster: "poster-destaque.jpg" }
 ];
 
 /* Títulos dos filmes favoritados (G) */
@@ -95,7 +93,7 @@ function posterIndisponivel(img) {
 /* ===== D. BUSCA POR TÍTULO + E. FILTRO POR GÊNERO ===== */
 /* Tira acentos e deixa em minúsculas para comparar textos */
 function normalizar(texto) {
-  return texto.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 /* Monta um novo array com os filmes que combinam com a busca e com o gênero */
@@ -212,5 +210,6 @@ for (const titulo of titulosDeSecao) {
 preencherGeneros();
 mostrarFilmes(filmes);
 atualizarFavoritos();
+
 
 
