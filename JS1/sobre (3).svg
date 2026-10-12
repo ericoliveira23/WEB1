@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Ícone do catálogo">
+  <rect width="120" height="120" rx="24" fill="#12343b"/>
+  <rect x="22" y="46" width="76" height="52" rx="6" fill="#f2b84b"/>
+  <polygon points="54,62 54,86 75,74" fill="#12343b"/>
+  <g transform="rotate(-10 22 44)">
+    <rect x="22" y="28" width="76" height="16" rx="3" fill="#ffffff"/>
+    <polygon points="30,28 42,28 34,44 22,44" fill="#12343b"/>
+    <polygon points="54,28 66,28 58,44 46,44" fill="#12343b"/>
+    <polygon points="78,28 90,28 82,44 70,44" fill="#12343b"/>
+  </g>
+</svg>
