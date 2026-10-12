@@ -11,10 +11,12 @@
 </head>
 <body>
 
-  <!-- A. CABEÇALHO -->
+  <!-- ===== A. CABEÇALHO ===== -->
   <header id="topo">
     <h1>Sessão da Tarde</h1>
     <h2>Catálogo de filmes para quem ama cinema</h2>
+
+    <!-- ===== E. MENU DE NAVEGAÇÃO (links âncora) ===== -->
     <nav>
       <a href="#destaque">Destaque</a>
       <a href="#secao-catalogo">Catálogo</a>
@@ -26,11 +28,11 @@
 
   <main>
 
-    <!-- B. DESTAQUE DA SEMANA -->
+    <!-- ===== B. DESTAQUE DA SEMANA ===== -->
     <section id="destaque">
       <h2 class="titulo-secao">Destaque da Semana</h2>
       <article class="destaque-card">
-        <img src="poster-destaque.jpg" alt="Pôster do filme Parasita" onerror="posterIndisponivel(this, 'Parasita')">
+        <img src="poster-destaque.jpg" alt="Pôster do filme Parasita">
         <div class="destaque-texto">
           <h3>Parasita</h3>
           <p>
@@ -48,10 +50,11 @@
       </article>
     </section>
 
-    <!-- C. CATÁLOGO (cards gerados pelo JavaScript) -->
+    <!-- ===== C. CATÁLOGO (cards gerados pelo JavaScript) ===== -->
     <section id="secao-catalogo">
       <h2 class="titulo-secao" id="titulo-catalogo">Catálogo</h2>
 
+      <!-- D, E, F. busca, filtro por gênero e inverter ordem -->
       <div class="controles">
         <div class="campo">
           <label for="busca">Buscar</label>
@@ -68,8 +71,10 @@
 
       <p class="resumo">Mostrando <span id="contador">0</span> filmes</p>
 
+      <!-- os cards são criados pela função mostrarFilmes() do script.js -->
       <section id="catalogo" class="grade"></section>
 
+      <!-- G. favoritos -->
       <aside class="favoritos">
         <h3>♥ Favoritos (<span id="contador-favoritos">0</span>)</h3>
         <p id="aviso-favoritos" class="aviso"></p>
@@ -78,14 +83,19 @@
       </aside>
     </section>
 
-    <!-- TABELA -->
+    <!-- ===== D. TABELA DE LANÇAMENTOS / PRÊMIOS ===== -->
     <section id="lancamentos">
       <h2 class="titulo-secao">Lançamentos e Prêmios</h2>
       <div class="tabela-wrapper">
         <table>
           <caption>Notas e situação dos filmes do catálogo</caption>
           <thead>
-            <tr><th>Filme</th><th>Ano</th><th>Nota</th><th>Status</th></tr>
+            <tr>
+              <th>Filme</th>
+              <th>Ano</th>
+              <th>Nota</th>
+              <th>Status</th>
+            </tr>
           </thead>
           <tbody>
             <tr><td>Parasita</td><td>2019</td><td>8,5</td><td>Oscar de Melhor Filme</td></tr>
@@ -99,34 +109,46 @@
       </div>
     </section>
 
-    <!-- LISTA DE GÊNEROS -->
+    <!-- ===== E. LISTA DE GÊNEROS ===== -->
     <section id="generos">
       <h2 class="titulo-secao">Gêneros</h2>
       <div class="listas">
         <ul class="generos-disco">
-          <li>Ação</li><li>Animação</li><li>Comédia</li><li>Drama</li>
+          <li>Ação</li>
+          <li>Animação</li>
+          <li>Comédia</li>
+          <li>Drama</li>
         </ul>
         <ul class="generos-quadrado">
-          <li>Ficção científica</li><li>Fantasia</li><li>Suspense</li><li>Crime</li>
+          <li>Ficção científica</li>
+          <li>Fantasia</li>
+          <li>Suspense</li>
+          <li>Crime</li>
         </ul>
         <ol class="generos-romano">
-          <li>Mais assistidos</li><li>Mais bem avaliados</li><li>Premiados</li><li>Clássicos</li>
+          <li>Mais assistidos</li>
+          <li>Mais bem avaliados</li>
+          <li>Premiados</li>
+          <li>Clássicos</li>
         </ol>
       </div>
     </section>
 
-    <!-- SOBRE / CONTATO -->
+    <!-- ===== F. SOBRE / CONTATO ===== -->
     <section id="contato">
       <h2 class="titulo-secao">Sobre / Contato</h2>
       <div class="sobre">
+        <img class="foto-sobre" src="sobre.svg" alt="Ícone do catálogo">
         <p>
           A Sessão da Tarde nasceu como um projeto da disciplina de Desenvolvimento WEB I
           para reunir filmes que valem a pipoca. Aqui você encontra o destaque da semana,
-          um catálogo organizado por gênero e as notas dos títulos mais premiados. Quer sugerir
-          um filme ou conversar sobre cinema? Fale comigo pelas redes abaixo.
+          um catálogo organizado por gênero e as notas dos títulos mais premiados. Quer sugerir um filme ou conversar sobre cinema? Fale comigo pelas redes abaixo.
         </p>
-        <p>O catálogo é atualizado toda semana com um novo destaque.</p>
+        <p>
+          O catálogo é atualizado toda semana com um novo destaque.
+        </p>
       </div>
+
       <ul class="redes">
         <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
@@ -143,4 +165,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
