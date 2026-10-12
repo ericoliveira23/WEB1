@@ -1,25 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro exemplo com JS</title>
-    <link rel="stylesheet" href=" estilo.css">
-  <style>
-        
-   </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>HTML + CSS + JS</h1>
-     <button onclick="mensagem()">clique aqui! 
-     </button>
+    <button onclick="mensagem()">clique aqui!</button>
 
-   <script> 
-      function mensagem() {
-         alert("ola, estamos aprendendo JS")
-        
-  }
-  </script>
-   
+    <script>
+        function mensagem() {
+            alert("Olá, estamos aprendendo JS");
+        }
+    </script>
 </body>
 </html>
