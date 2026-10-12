@@ -6,14 +6,14 @@
 
 /* ===== B. DADOS DOS FILMES (array de objetos) ===== */
 let filmes = [
-  { titulo: "Interestelar",              ano: 2014, genero: "Ficção científica", nota: 8.7, poster: "poster-1.jpg" },
-  { titulo: "Cidade de Deus",            ano: 2002, genero: "Crime",             nota: 8.6, poster: "poster-2.jpg" },
-  { titulo: "A Viagem de Chihiro",       ano: 2001, genero: "Animação",          nota: 8.6, poster: "poster-5.jpg" },
-  { titulo: "Mad Max: Estrada da Fúria", ano: 2015, genero: "Ação",              nota: 8.1, poster: "poster-4.jpg" },
-  { titulo: "Ainda Estou Aqui",          ano: 2024, genero: "Drama",             nota: 8.0, poster: "poster-6.jpg" },
-  { titulo: "Divertida Mente",           ano: 2015, genero: "Animação",          nota: 8.1, poster: "poster-3.jpg" },
-  { titulo: "Parasita",                  ano: 2019, genero: "Suspense",          nota: 8.5, poster: "poster-destaque.jpg" },
-  { titulo: "Shrek",                     ano: 2001, genero: "Animação",          nota: 7.9, poster: "poster-shrek.jpg" }
+  { titulo: "Interestelar",             ano: 2014, genero: "Ficção científica", nota: 8.7, poster: "poster-1.jpg" },
+  { titulo: "Cidade de Deus",           ano: 2002, genero: "Crime",             nota: 8.6, poster: "poster-2.jpg" },
+  { titulo: "A Viagem de Chihiro",      ano: 2001, genero: "Animação",          nota: 8.6, poster: "poster-3.jpg" },
+  { titulo: "Mad Max: Estrada da Fúria", ano: 2015, genero: "Ação",             nota: 8.1, poster: "poster-4.jpg" },
+  { titulo: "Ainda Estou Aqui",         ano: 2024, genero: "Drama",             nota: 8.0, poster: "poster-5.jpg" },
+  { titulo: "Divertida Mente",          ano: 2015, genero: "Animação",          nota: 8.1, poster: "poster-6.jpg" },
+  { titulo: "Parasita",                 ano: 2019, genero: "Suspense",          nota: 8.5, poster: "poster-destaque.jpg" },
+  { titulo: "Shrek",                    ano: 2001, genero: "Animação",          nota: 7.9, poster: "poster-7.jpg" }
 ];
 
 /* Títulos dos filmes favoritados (G) */
@@ -21,6 +21,14 @@ let favoritos = [];
 
 /* Lista que está aparecendo na tela agora (resultado da busca/filtro) */
 let listaAtual = filmes;
+
+/* Imagem de reserva caso algum pôster não carregue */
+const POSTER_RESERVA = "data:image/svg+xml;utf8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">' +
+  '<rect width="400" height="600" fill="#12343b"/>' +
+  '<text x="200" y="300" text-anchor="middle" font-family="Georgia,serif" ' +
+  'font-size="32" fill="#f2c66d">Sem pôster</text></svg>'
+);
 
 /* Elementos da página */
 const catalogo          = document.getElementById("catalogo");
@@ -32,23 +40,6 @@ const btnLimpar         = document.getElementById("btn-limpar-favoritos");
 const contadorFavoritos = document.getElementById("contador-favoritos");
 const listaFavoritos    = document.getElementById("lista-favoritos");
 const avisoFavoritos    = document.getElementById("aviso-favoritos");
-
-
-/* Cria uma imagem de reserva (SVG) com o título, caso o pôster não exista */
-function posterReserva(titulo) {
-  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">' +
-    '<rect width="400" height="600" fill="#12343b"/>' +
-    '<rect x="16" y="16" width="368" height="568" fill="none" stroke="#f2b84b" stroke-width="3"/>' +
-    '<text x="200" y="300" text-anchor="middle" font-family="Georgia,serif" ' +
-    'font-size="30" fill="#ffffff">' + titulo + '</text></svg>';
-  return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
-}
-
-/* Troca o pôster que não carregou pela imagem de reserva */
-function posterIndisponivel(img, titulo) {
-  img.onerror = null;
-  img.src = posterReserva(titulo || img.alt);
-}
 
 
 /* ===== C. EXIBINDO O CATÁLOGO ===== */
@@ -92,6 +83,12 @@ function mostrarFilmes(lista) {
 
   catalogo.innerHTML = html;
   contador.innerText = lista.length;   /* total de filmes mostrados */
+}
+
+/* Troca o pôster quebrado pela imagem de reserva */
+function posterIndisponivel(img) {
+  img.onerror = null;
+  img.src = POSTER_RESERVA;
 }
 
 
@@ -215,4 +212,5 @@ for (const titulo of titulosDeSecao) {
 preencherGeneros();
 mostrarFilmes(filmes);
 atualizarFavoritos();
+
 
