@@ -83,9 +83,7 @@ section {
   border-bottom: 3px solid #e5a93d;
   padding-bottom: 8px;
   margin-bottom: 25px;
-}
-
-/* ===== DESTAQUE DA SEMANA ===== */
+}/* ===== DESTAQUE DA SEMANA ===== */
 .destaque-card {
   display: flex;
   align-items: center;
@@ -127,9 +125,7 @@ section {
   margin: 3px;
   border-radius: 20px;
   font-size: 0.85rem;
-}
-
-/* ===== GRADE DE FILMES ===== */
+}/* ===== GRADE DE FILMES ===== */
 .grade {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -187,9 +183,7 @@ section {
   font-weight: bold;
   border-top: 1px solid #dddddd;
   padding-top: 10px;
-}
-
-/* ===== TABELA ===== */
+}/* ===== TABELA ===== */
 .tabela-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -250,9 +244,7 @@ tbody tr:hover {
 
 .generos-romano {
   list-style-type: upper-roman;
-}
-
-/* ===== SOBRE E CONTATO ===== */
+}/* ===== SOBRE E CONTATO ===== */
 .sobre {
   background-color: #ffffff;
   padding: 25px;
@@ -303,9 +295,7 @@ footer p {
 
 footer a {
   color: #f2c66d;
-}
-
-/* ===== CELULAR E TABLET ===== */
+}/* ===== CELULAR E TABLET ===== */
 @media (max-width: 800px) {
   .grade {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -561,27 +551,6 @@ header h2 {
   margin: 0;
   color: #b66b16;
 }
+;
 
-/* ===== CATÁLOGO COLORIDO (cards, filtros e favoritos em azul-esverdeado claro) ===== */
-.card,
-.controles,
-.favoritos,
-.vazio {
-  background-color: #d4e6e3;
-  border-color: #aecbc7;
-}
-
-.card .genero {
-  color: #3d4c50;
-}
-
-.card:hover {
-  box-shadow: 0 8px 22px #12343b30;
-}
-
-
-/* Pôsteres reais: mostram a imagem inteira, cortando só o excesso */
-.card img {
-  object-position: top;
-}
 
